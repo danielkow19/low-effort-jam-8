@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float lrDeceleration;
 
-    [SerializeField]
-    private float lrIceDeceleration;
-
     // Temperature fields
     public float temperature;
 
@@ -59,16 +56,13 @@ public class PlayerController : MonoBehaviour
         bool left = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
         bool right = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
 
-        xVel = rigidbody.velocity.x;
-        yVel = rigidbody.velocity.y;
-
         if (left)
         {
-            xVel -= lrAccel;
+            rigidbody.AddForce(new Vector2(-lrAccel, 0));
         }
         if (right)
         {
-            yVel += lrAccel;
+            rigidbody.AddForce(new Vector2(lrAccel, 0));
         }
 
         switch (state)
@@ -84,6 +78,9 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+        xVel = rigidbody.velocity.x;
+        yVel = rigidbody.velocity.y;
+
         xVel = Mathf.Clamp(xVel, -lrMaxSpeed, lrMaxSpeed);
         yVel = Mathf.Clamp(yVel, -downMaxSpeed, upMaxSpeed);
 
@@ -97,29 +94,29 @@ public class PlayerController : MonoBehaviour
     {
         if (!(left || right))
         {
-            xVel /= lrIceDeceleration;
+            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
         }
 
-        yVel -= gravity;
+        rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
     }
 
     void LiquidUpdate(bool left, bool right)
     {
         if (!(left || right))
         {
-            xVel /= lrDeceleration;
+            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
         }
 
-        yVel -= gravity;
+        rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
     }
 
     void GasUpdate(bool left, bool right)
     {
         if (!(left || right))
         {
-            xVel /= lrDeceleration;
+            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
         }
 
-        yVel += upAccel;
+        rigidbody.AddForce(new Vector2(0, upAccel / rigidbody.mass));
     }
 }
