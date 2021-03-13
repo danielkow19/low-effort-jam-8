@@ -40,6 +40,18 @@ public class PlayerController : MonoBehaviour
     public float temperature;
 
     [SerializeField]
+    private float minTemp;
+
+    [SerializeField]
+    private float maxTemp;
+
+    [SerializeField]
+    private float freezingTemp;
+
+    [SerializeField]
+    private float boilingTemp;
+
+    [SerializeField]
     private float heatLossRate;
 
     // Start is called before the first frame update
@@ -88,6 +100,24 @@ public class PlayerController : MonoBehaviour
 
         // Temperature
         temperature -= heatLossRate * Time.deltaTime;
+
+        temperature = Mathf.Clamp(temperature, minTemp, maxTemp);
+
+        if (temperature < freezingTemp)
+        {
+            state = MatterState.Solid;
+            gameObject.layer = 8;
+        }
+        else if (temperature < boilingTemp)
+        {
+            state = MatterState.Liquid;
+            gameObject.layer = 9;
+        }
+        else
+        {
+            state = MatterState.Gas;
+            gameObject.layer = 10;
+        }
     }
 
     void SolidUpdate(bool left, bool right)
