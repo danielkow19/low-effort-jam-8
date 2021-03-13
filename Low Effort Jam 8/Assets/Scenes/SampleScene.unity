@@ -1130,40 +1130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: temperature
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: maxTemp
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: freezingTemp
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: boilingTemp
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: heatLossRate
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536747, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191267911882536747, guid: 27b7813c614c0114abf079a6b64fbb8b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27b7813c614c0114abf079a6b64fbb8b, type: 3}
