@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public MatterState state;
 
+    public Animator animator;
+
     // Movement fields
     [SerializeField]
     private Rigidbody2D rigidbody;
@@ -148,12 +150,16 @@ public class PlayerController : MonoBehaviour
             yVel = Mathf.Max(-downMaxSpeed, yVel);
         }
 
+        animator.SetBool("IsFalling", yVel < 0);
+
         rigidbody.velocity = new Vector2(xVel, yVel);
 
         // Temperature
         temperature -= heatLossRate * Time.deltaTime;
 
         temperature = Mathf.Clamp(temperature, minTemp, maxTemp);
+
+        animator.SetFloat("Temperature", temperature);
 
         thermo.GetComponent<Thermometer>().SetTemperature(temperature);
 
