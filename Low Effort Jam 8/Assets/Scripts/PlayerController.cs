@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float lrDeceleration;
 
+    [SerializeField]
+    private float jumpSpeed;
+
     // Temperature fields
     public float temperature;
 
@@ -54,6 +57,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float heatLossRate;
 
+    // Input
+    private bool left;
+    private bool right;
+    private bool jump;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,10 +72,41 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Movement
-        bool left = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
-        bool right = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+        left = Input.GetKey(KeyCode.A)
+            || Input.GetKey(KeyCode.LeftArrow);
 
+        right = Input.GetKey(KeyCode.D)
+            || Input.GetKey(KeyCode.RightArrow);
+
+        jump = Input.GetKeyDown(KeyCode.UpArrow)
+            || Input.GetKeyDown(KeyCode.Space)
+            || Input.GetKeyDown(KeyCode.W);
+
+        if (state == MatterState.Solid)
+        {
+            // Checks the bottom left, bottom middle, and bottom right of the player's hitbox
+            BoxCollider2D box = gameObject.GetComponent<BoxCollider2D>();
+            Vector2 leftPoint = new Vector2(box.bounds.center.x - box.bounds.extents.x, box.bounds.center.y - box.bounds.extents.y);
+            Vector2 midPoint = new Vector2(box.bounds.center.x, box.bounds.center.y - box.bounds.extents.y);
+            Vector2 rightPoint = new Vector2(box.bounds.center.x + box.bounds.extents.x, box.bounds.center.y - box.bounds.extents.y);
+
+            LayerMask mask = ~LayerMask.GetMask(new string[] { "Solid", "Liquid", "Gas" });
+
+            // If any of the three raycasts hit and any of the three jump buttons are pressed, jump
+            if ((Physics2D.Raycast(leftPoint, Vector2.down, 0.1f, mask)
+                || Physics2D.Raycast(midPoint, Vector2.down, 0.1f, mask)
+                || Physics2D.Raycast(rightPoint, Vector2.down, 0.1f, mask))
+                && jump)
+            {
+                rigidbody.AddForce(Vector2.up * jumpSpeed);
+                jump = false;
+                //rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
         if (left)
         {
             rigidbody.AddForce(new Vector2(-lrAccel, 0));
@@ -76,17 +115,21 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody.AddForce(new Vector2(lrAccel, 0));
         }
+        if (!(left || right))
+        {
+            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
+        }
 
         switch (state)
         {
             case MatterState.Solid:
-                SolidUpdate(left, right);
+                SolidUpdate();
                 break;
             case MatterState.Liquid:
-                LiquidUpdate(left, right);
+                LiquidUpdate();
                 break;
             case MatterState.Gas:
-                GasUpdate(left, right);
+                GasUpdate();
                 break;
         }
 
@@ -94,7 +137,15 @@ public class PlayerController : MonoBehaviour
         yVel = rigidbody.velocity.y;
 
         xVel = Mathf.Clamp(xVel, -lrMaxSpeed, lrMaxSpeed);
-        yVel = Mathf.Clamp(yVel, -downMaxSpeed, upMaxSpeed);
+
+        if (state == MatterState.Gas)
+        {
+            yVel = Mathf.Clamp(yVel, -downMaxSpeed, upMaxSpeed);
+        }
+        else
+        {
+            yVel = Mathf.Max(-downMaxSpeed, yVel);
+        }
 
         rigidbody.velocity = new Vector2(xVel, yVel);
 
@@ -120,33 +171,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SolidUpdate(bool left, bool right)
+    void SolidUpdate()
     {
-        if (!(left || right))
-        {
-            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
-        }
-
         rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
     }
 
-    void LiquidUpdate(bool left, bool right)
+    void LiquidUpdate()
     {
-        if (!(left || right))
-        {
-            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
-        }
-
         rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
     }
 
-    void GasUpdate(bool left, bool right)
+    void GasUpdate()
     {
-        if (!(left || right))
-        {
-            rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
-        }
-
         rigidbody.AddForce(new Vector2(0, upAccel / rigidbody.mass));
     }
 }

@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322758773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.13, y: -1.7, z: -0.70129}
+  m_LocalPosition: {x: 7.05, y: -2, z: -0.70129}
   m_LocalScale: {x: 61.08885, y: 3.6244, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1078,12 +1078,12 @@ PrefabInstance:
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.011
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.46
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
@@ -1130,6 +1130,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: jumpSpeed
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: gravity
+      value: 9.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: lrMaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: lrAccel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: lrDeceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536745, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 04aeb94e262524240b040ac2e99e6e73, type: 2}
     - target: {fileID: 2191267911882536747, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_Name
