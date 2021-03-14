@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float lrDeceleration;
 
+    [SerializeField]
+    private float jumpForce;
+
     // Temperature fields
     public float temperature;
 
@@ -94,7 +97,15 @@ public class PlayerController : MonoBehaviour
         yVel = rigidbody.velocity.y;
 
         xVel = Mathf.Clamp(xVel, -lrMaxSpeed, lrMaxSpeed);
-        yVel = Mathf.Clamp(yVel, -downMaxSpeed, upMaxSpeed);
+
+        if (state == MatterState.Gas)
+        {
+            yVel = Mathf.Clamp(yVel, -downMaxSpeed, upMaxSpeed);
+        }
+        else
+        {
+            yVel = Mathf.Max(-downMaxSpeed, yVel);
+        }
 
         rigidbody.velocity = new Vector2(xVel, yVel);
 
@@ -125,6 +136,23 @@ public class PlayerController : MonoBehaviour
         if (!(left || right))
         {
             rigidbody.AddForce(new Vector2(-xVel * lrDeceleration, 0));
+        }
+
+        // Checks the bottom left, bottom middle, and bottom right of the player's hitbox
+        BoxCollider2D box = gameObject.GetComponent<BoxCollider2D>();
+        Vector2 leftPoint = new Vector2(box.bounds.center.x - box.bounds.extents.x, box.bounds.center.y - box.bounds.extents.y);
+        Vector2 midPoint = new Vector2(box.bounds.center.x, box.bounds.center.y - box.bounds.extents.y);
+        Vector2 rightPoint = new Vector2(box.bounds.center.x + box.bounds.extents.x, box.bounds.center.y - box.bounds.extents.y);
+
+        // If any of the three raycasts hit and any of the three jump buttons are pressed, jump
+        if ((Physics2D.Raycast(leftPoint, Vector2.down, 0.1f)
+            || Physics2D.Raycast(midPoint, Vector2.down, 0.1f)
+            || Physics2D.Raycast(rightPoint, Vector2.down, 0.1f))
+            && (Input.GetKeyDown(KeyCode.UpArrow)
+            || Input.GetKeyDown(KeyCode.Space)
+            || Input.GetKeyDown(KeyCode.W)))
+        {
+            rigidbody.AddForce(new Vector2(0, jumpForce));
         }
 
         rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
