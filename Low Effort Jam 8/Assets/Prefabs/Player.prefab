@@ -105,15 +105,9 @@ MonoBehaviour:
   upMaxSpeed: 5
   lrAccel: 10
   lrMaxSpeed: 5
-<<<<<<< Updated upstream
   lrDeceleration: 10
   jumpSpeed: 350
   temperature: 0
-=======
-  lrDeceleration: 0.8
-  jumpSpeed: 15
-  temperature: 20
->>>>>>> Stashed changes
   minTemp: 0
   maxTemp: 150
   freezingTemp: 50

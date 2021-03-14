@@ -57,15 +57,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float heatLossRate;
 
-<<<<<<< Updated upstream
     // Input
     private bool left;
     private bool right;
     private bool jump;
-=======
+
     [SerializeField]
     private GameObject thermo;
->>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
