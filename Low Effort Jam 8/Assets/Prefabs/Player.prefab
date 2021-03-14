@@ -113,6 +113,7 @@ MonoBehaviour:
   freezingTemp: 50
   boilingTemp: 100
   heatLossRate: 5
+  thermo: {fileID: 0}
 --- !u!50 &2191267911882536745
 Rigidbody2D:
   serializedVersion: 4

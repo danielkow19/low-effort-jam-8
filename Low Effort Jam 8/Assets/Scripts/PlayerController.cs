@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
 {
     public MatterState state;
 
-    public Animator animator;
-
     // Movement fields
     [SerializeField]
     private Rigidbody2D rigidbody;
@@ -63,6 +61,9 @@ public class PlayerController : MonoBehaviour
     private bool left;
     private bool right;
     private bool jump;
+
+    [SerializeField]
+    private GameObject thermo;
 
     // Start is called before the first frame update
     void Start()
@@ -147,8 +148,6 @@ public class PlayerController : MonoBehaviour
             yVel = Mathf.Max(-downMaxSpeed, yVel);
         }
 
-        animator.SetBool("IsFalling", yVel < 0);
-
         rigidbody.velocity = new Vector2(xVel, yVel);
 
         // Temperature
@@ -156,7 +155,7 @@ public class PlayerController : MonoBehaviour
 
         temperature = Mathf.Clamp(temperature, minTemp, maxTemp);
 
-        animator.SetFloat("Temperature", temperature);
+        thermo.GetComponent<Thermometer>().SetTemperature(temperature);
 
         if (temperature < freezingTemp)
         {
