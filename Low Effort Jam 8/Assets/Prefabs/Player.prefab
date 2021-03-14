@@ -105,7 +105,7 @@ MonoBehaviour:
   lrAccel: 5
   lrMaxSpeed: 5
   lrDeceleration: 0.8
-  jumpForce: 500
+  jumpSpeed: 15
   temperature: -20
   minTemp: 0
   maxTemp: 150

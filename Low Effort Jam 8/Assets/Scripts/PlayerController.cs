@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     private float lrDeceleration;
 
     [SerializeField]
-    private float jumpForce;
+    private float jumpSpeed;
 
     // Temperature fields
     public float temperature;
@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
             || Input.GetKeyDown(KeyCode.Space)
             || Input.GetKeyDown(KeyCode.W)))
         {
-            rigidbody.AddForce(new Vector2(0, jumpForce));
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
         }
 
         rigidbody.AddForce(new Vector2(0, -gravity / rigidbody.mass));
