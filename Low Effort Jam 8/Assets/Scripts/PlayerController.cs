@@ -99,8 +99,6 @@ public class PlayerController : MonoBehaviour
                 && jump)
             {
                 rigidbody.AddForce(Vector2.up * jumpSpeed);
-                jump = false;
-                //rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
             }
         }
     }
