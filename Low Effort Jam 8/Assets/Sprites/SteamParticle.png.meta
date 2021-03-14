@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b5ae2ec99df433846a35c50f438f026a
+guid: 565160d364571a4499940fe5972851ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6049605792901559095
-    second: Water_0
+      213: -660080137631666120
+    second: SteamParticle_0
   - first:
-      213: -5882170695943828418
-    second: Water_1
+      213: 5445722343707759051
+    second: SteamParticle_1
   - first:
-      213: 7591774343886807129
-    second: Water_2
+      213: 5714315597524916849
+    second: SteamParticle_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -120,64 +120,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_0
+      name: SteamParticle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 14
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 733fa0d9a6484f350800000000000000
-      internalID: 6049605792901559095
+      spriteID: 8307c21bc9ce6d6f0800000000000000
+      internalID: -660080137631666120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_1
+      name: SteamParticle_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 20
         y: 0
-        width: 42
-        height: 14
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c4e08cae45e5ea0800000000000000
-      internalID: -5882170695943828418
+      spriteID: bc1db127e97139b40800000000000000
+      internalID: 5445722343707759051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_2
+      name: SteamParticle_2
       rect:
         serializedVersion: 2
-        x: 84
+        x: 40
         y: 0
-        width: 42
-        height: 14
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9502c46fa866b5960800000000000000
-      internalID: 7591774343886807129
+      spriteID: 17a52fc92c35d4f40800000000000000
+      internalID: 5714315597524916849
       vertices: []
       indices: 
       edges: []

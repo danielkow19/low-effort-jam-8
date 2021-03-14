@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2191267911882536744}
   - component: {fileID: 2191267911882536745}
   - component: {fileID: 1432270357}
+  - component: {fileID: 319508348519796803}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -102,16 +103,17 @@ MonoBehaviour:
   downMaxSpeed: 10
   upAccel: 1
   upMaxSpeed: 5
-  lrAccel: 5
+  lrAccel: 10
   lrMaxSpeed: 5
-  lrDeceleration: 0.8
-  jumpSpeed: 10
+  lrDeceleration: 10
+  jumpSpeed: 350
   temperature: 0
   minTemp: 0
   maxTemp: 150
   freezingTemp: 50
   boilingTemp: 100
   heatLossRate: 5
+  thermo: {fileID: 0}
 --- !u!50 &2191267911882536745
 Rigidbody2D:
   serializedVersion: 4
@@ -128,7 +130,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 04aeb94e262524240b040ac2e99e6e73, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -159,3 +161,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28, y: 0.25}
   m_EdgeRadius: 0
+--- !u!95 &319508348519796803
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191267911882536747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
