@@ -102,10 +102,10 @@ MonoBehaviour:
   downMaxSpeed: 10
   upAccel: 1
   upMaxSpeed: 5
-  lrAccel: 5
+  lrAccel: 10
   lrMaxSpeed: 5
-  lrDeceleration: 0.8
-  jumpSpeed: 10
+  lrDeceleration: 10
+  jumpSpeed: 350
   temperature: 0
   minTemp: 0
   maxTemp: 150
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 04aeb94e262524240b040ac2e99e6e73, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
