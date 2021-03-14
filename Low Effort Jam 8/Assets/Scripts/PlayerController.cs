@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     private float boilingTemp;
 
     [SerializeField]
-    private float heatLossRate;
+    public float heatLossRate;
 
     // Input
     private bool left;

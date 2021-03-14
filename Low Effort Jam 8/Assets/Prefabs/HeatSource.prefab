@@ -99,7 +99,7 @@ MonoBehaviour:
   heatAmt: 200
   rate: 15
   collider: {fileID: 2867169563021577143}
-  player: {fileID: 0}
+  player: {fileID: 2191267911882536747, guid: 27b7813c614c0114abf079a6b64fbb8b, type: 3}
 --- !u!58 &2867169563021577143
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -338,7 +338,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

@@ -13,17 +13,15 @@ public class HeatSource : MonoBehaviour
     public CircleCollider2D collider;
 
     public GameObject player;
-    // Start is called before the first frame update
-    void Start()
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.gameObject.Equals(player))
+        {
+            player.GetComponent<PlayerController>().heatLossRate = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.Equals(player))
@@ -31,8 +29,13 @@ public class HeatSource : MonoBehaviour
             heatAmt -= Time.deltaTime * rate;
             player.GetComponent<PlayerController>().temperature += Time.deltaTime * rate;
         }
-        
     }
 
-
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.Equals(player))
+        {
+            player.GetComponent<PlayerController>().heatLossRate = 5;
+        }
+    }
 }
