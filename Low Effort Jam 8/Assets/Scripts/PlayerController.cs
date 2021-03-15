@@ -113,10 +113,12 @@ public class PlayerController : MonoBehaviour
         if (left)
         {
             rigidbody.AddForce(new Vector2(-lrAccel, 0));
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         if (right)
         {
             rigidbody.AddForce(new Vector2(lrAccel, 0));
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         if (!(left || right))
         {
