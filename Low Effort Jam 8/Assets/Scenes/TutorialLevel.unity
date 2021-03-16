@@ -240,7 +240,7 @@ Transform:
   m_LocalScale: {x: 8.272991, y: 8.272991, z: 8.272991}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392603440
 GameObject:
@@ -446,7 +446,7 @@ Transform:
   m_LocalScale: {x: 4.3217, y: 4.3217, z: 4.3217}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &682495472
 GameObject:
@@ -557,7 +557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106940463
 GameObject:
@@ -657,7 +657,7 @@ PrefabInstance:
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
@@ -758,7 +758,7 @@ RectTransform:
   m_Children:
   - {fileID: 337993293}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1308,7 +1308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1850478876
 PrefabInstance:
@@ -1350,6 +1350,11 @@ PrefabInstance:
     - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
       propertyPath: heatAmt
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+        type: 3}
+      propertyPath: maxHeat
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
@@ -1451,10 +1456,15 @@ PrefabInstance:
       propertyPath: heatAmt
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+        type: 3}
+      propertyPath: maxHeat
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
