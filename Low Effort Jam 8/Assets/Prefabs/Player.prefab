@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  animator: {fileID: 0}
   rigidbody: {fileID: 2191267911882536745}
   gravity: 9.8
   downMaxSpeed: 10
@@ -112,7 +113,7 @@ MonoBehaviour:
   maxTemp: 150
   freezingTemp: 50
   boilingTemp: 100
-  heatLossRate: 5
+  heatLossRate: 10
   thermo: {fileID: 0}
 --- !u!50 &2191267911882536745
 Rigidbody2D:
