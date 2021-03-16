@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164468233}
   m_Layer: 0
-  m_Name: VentSprites
+  m_Name: GrateSprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
