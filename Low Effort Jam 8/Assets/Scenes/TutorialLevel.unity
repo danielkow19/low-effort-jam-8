@@ -1570,6 +1570,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536743, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: thermo
@@ -2656,6 +2661,11 @@ PrefabInstance:
       propertyPath: maxHeat
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+        type: 3}
+      propertyPath: animationState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
       propertyPath: m_RootOrder
@@ -2763,6 +2773,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1405081542}
+    - target: {fileID: 8295062676426876035, guid: ae38caf3d29a00b48aa98e99ea759aae,
+        type: 3}
+      propertyPath: nextScene
+      value: HallwayLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 8295062676426876037, guid: ae38caf3d29a00b48aa98e99ea759aae,
         type: 3}
       propertyPath: m_RootOrder
