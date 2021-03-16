@@ -16,7 +16,7 @@ public class HeatSource : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.Equals(player))
+        if(other.gameObject.Equals(player) && heatAmt > 0)
         {
             player.GetComponent<PlayerController>().heatLossRate = 0;
         }
@@ -24,7 +24,7 @@ public class HeatSource : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.Equals(player))
+        if(other.gameObject.Equals(player) && heatAmt > 0)
         {
             heatAmt -= Time.deltaTime * rate;
             player.GetComponent<PlayerController>().temperature += Time.deltaTime * rate;
