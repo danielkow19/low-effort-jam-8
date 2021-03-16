@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2584533250107844467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.48, y: -1.28, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.4248, y: 2.4248, z: 2.4248}
   m_Children:
   - {fileID: 3204939130915596081}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heatAmt: 200
+  maxHeat: 200
   rate: 15
   collider: {fileID: 2867169563021577143}
   player: {fileID: 2191267911882536747, guid: 27b7813c614c0114abf079a6b64fbb8b, type: 3}
@@ -164,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4401769589578886515}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.133}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.41240516, y: 0.41240516, z: 0.41240516}
   m_Children: []
   m_Father: {fileID: 9101237620885993828}
