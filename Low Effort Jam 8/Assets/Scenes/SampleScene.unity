@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &153382583 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3178662516342870948, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 661415875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &322758773
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +551,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1635166356}
+    - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 153382583}
+    - target: {fileID: 5754834562177194125, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
+        type: 3}
+      propertyPath: animationState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -553,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.34
+      value: -1.326
       objectReference: {fileID: 0}
     - target: {fileID: 9101237620885993828, guid: 6f1507c6f3de25c45bcbd7621e9b51d2,
         type: 3}
@@ -1530,6 +1546,11 @@ PrefabInstance:
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191267911882536743, guid: 27b7813c614c0114abf079a6b64fbb8b,
+        type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536744, guid: 27b7813c614c0114abf079a6b64fbb8b,
