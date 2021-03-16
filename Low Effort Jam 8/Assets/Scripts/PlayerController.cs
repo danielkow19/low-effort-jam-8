@@ -113,6 +113,31 @@ public class PlayerController : MonoBehaviour
                 rigidbody.AddForce(Vector2.up * jumpSpeed);
             }
         }
+
+        // Temperature
+        temperature -= heatLossRate * Time.deltaTime;
+
+        temperature = Mathf.Clamp(temperature, minTemp, maxTemp);
+
+        animator.SetFloat("Temperature", temperature);
+
+        thermo.GetComponent<Thermometer>().SetTemperature(temperature);
+
+        if (temperature < freezingTemp)
+        {
+            state = MatterState.Solid;
+            gameObject.layer = 8;
+        }
+        else if (temperature < boilingTemp)
+        {
+            state = MatterState.Liquid;
+            gameObject.layer = 9;
+        }
+        else
+        {
+            state = MatterState.Gas;
+            gameObject.layer = 10;
+        }
     }
 
     void FixedUpdate()
@@ -162,31 +187,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsFalling", yVel < 0);
 
         rigidbody.velocity = new Vector2(xVel, yVel);
-
-        // Temperature
-        temperature -= heatLossRate * Time.deltaTime;
-
-        temperature = Mathf.Clamp(temperature, minTemp, maxTemp);
-
-        animator.SetFloat("Temperature", temperature);
-
-        thermo.GetComponent<Thermometer>().SetTemperature(temperature);
-
-        if (temperature < freezingTemp)
-        {
-            state = MatterState.Solid;
-            gameObject.layer = 8;
-        }
-        else if (temperature < boilingTemp)
-        {
-            state = MatterState.Liquid;
-            gameObject.layer = 9;
-        }
-        else
-        {
-            state = MatterState.Gas;
-            gameObject.layer = 10;
-        }
     }
 
     void SolidUpdate()

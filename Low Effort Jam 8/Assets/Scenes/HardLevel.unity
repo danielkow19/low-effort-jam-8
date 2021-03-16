@@ -536,7 +536,7 @@ PrefabInstance:
     - target: {fileID: 5609883858229391986, guid: e627a0dc730ab604c92b135435b87b9d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8170595
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 5609883858229391986, guid: e627a0dc730ab604c92b135435b87b9d,
         type: 3}
@@ -1595,7 +1595,7 @@ PrefabInstance:
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.22041735
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: 2191267911882536742, guid: 27b7813c614c0114abf079a6b64fbb8b,
         type: 3}
@@ -1936,7 +1936,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.915083, y: 1.6956308}
+  m_Offset: {x: -2.920744, y: 1.6956308}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1947,7 +1947,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9720299, y: 1.01055}
+  m_Size: {x: 2.9833527, y: 1.01055}
   m_EdgeRadius: 0
 --- !u!61 &659746776
 BoxCollider2D:
@@ -1962,7 +1962,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.4158669, y: 0.6804693}
+  m_Offset: {x: -3.4158669, y: 0.51908064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1973,7 +1973,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9982378, y: 3.040876}
+  m_Size: {x: 1.9982376, y: 2.7180986}
   m_EdgeRadius: 0
 --- !u!61 &659746777
 BoxCollider2D:
@@ -4272,7 +4272,7 @@ PrefabInstance:
     - target: {fileID: 5609883858229391986, guid: e627a0dc730ab604c92b135435b87b9d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8170595
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 5609883858229391986, guid: e627a0dc730ab604c92b135435b87b9d,
         type: 3}
